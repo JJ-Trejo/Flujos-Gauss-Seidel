@@ -1,0 +1,55 @@
+Archivos que no se subiran al repositorio
+
+# Archivos de objeto
+*.o
+*.obj
+
+# Archivos de módulo
+*.mod
+*.smod
+
+# Archivos de base de datos del programa
+*.pdb
+
+# Archivos de información de enlace incremental
+*.ilk
+
+# Archivos de biblioteca estática
+*.lib
+*.a
+
+# Archivos de biblioteca dinámica
+*.dll
+*.so
+*.dylib
+
+# Archivos de información de enlace
+*.map
+
+# Archivos de configuración y proyecto
+*.mak
+*.dep
+
+# Archivos de registro y salida
+*.log
+*.out
+
+# Archivos ejecutables
+*.exe
+
+# Archivos de core dumps
+core
+*.core
+
+# Directorios y archivos de compilación y ejecución
+build/
+dist/
+*.class
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores
+*.swp
+*~
