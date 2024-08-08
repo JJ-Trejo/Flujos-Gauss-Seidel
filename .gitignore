@@ -1,5 +1,7 @@
 Archivos que no se subiran al repositorio
 
+*.mdp
+
 # Archivos de objeto
 *.o
 *.obj
