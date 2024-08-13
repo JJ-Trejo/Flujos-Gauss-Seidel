@@ -1,0 +1,62 @@
+# >>> Archivo de datos para el programa FLUJOS.exe
+#          José de Jesús Trejo Méndez
+#                  13/08/24
+# POTENCIA BASE EN MVA
+     100.0
+# NUMERO DE NODOS | NUMERO DE ELEMENTOS
+       5     7
+
+#>>DATOS DE ELEMENTOS:
+# NODO DE SALIDA | NODO DE ENTRADA | IMPEDANCIA SERIE | TIPO
+
+#  SI ES LINEA DE TRANSMISION, TIPO = 1, EN ESTE CASO SE LEE 
+#  LA ADMITANCIA Ypq/2 DE LA LINEA, CASO CONTRARIO (cualquier
+#  otro número), PROCEDE A LEER LA IMPEDANCIA SERIE DE OTRO ELEMENTOS
+
+       1     2    (0.02,0.06)   1    
+                  (0.0,0.030)       # ADMITANCIA PARALELO/2
+       1     3    (0.08,0.24)   1
+                  (0.0,0.025)
+       2     3    (0.06,0.18)   1
+                  (0.0,0.020)
+       2     4    (0.06,0.18)   1
+                  (0.0,0.020)
+       2     5    (0.04,0.12)   1
+                  (0.0,0.015)
+       3     4    (0.01,0.03)   1
+                  (0.0,0.010)
+       4     5    (0.08,0.24)   1
+                  (0.0,0.025)
+#VOLTAJE COMPLEJO EN POR UNIDAD | TIPO DE NODO
+#   (1) SLACK     (2) CARGA     (3) VOLTAJE CONTROLADO
+# CUANDO SE TRATA DEL NODO COMPENSADOR NO LEE DATOS DE POTENCIAS EN EL BUS
+
+# VOLTAJE EN EL NODO 1 | TIPO DE NODO (1 SLACK) 
+       (1.0,0.0)    1   115.0
+
+# VOLTAJE EN EL NODO 2 | TIPO DE NODO (2 CARGA)
+       (1.0,0.0)    2   115.0
+# POTENCIAS EN EL NODO 2 EN POR UNIDAD
+# POTENCIA DE GENERACION | POTENCIA DE CARGA
+       (0.4,0.3)   (0.2,0.1)
+# VOLTAJE EN EL NODO 3 Y ASI CON LOS NODOS RESTANTES
+       (1.0,0.0)    2   115.0
+       (0.0,0.0)   (0.45,0.15)
+
+       (1.0,0.0)    2   115.0
+       (0.0,0.0)   (0.40,0.05)
+
+       (1.0,0.0)    2   115.0
+       (0.0,0.0)   (0.60,0.10)
+
+# NUMERO MAXIMO DE ITERACIONES
+       15
+
+# TOLERANCIA MAXIMA PERMITIDA
+       0.0001
+
+# FACTOR DE ACELERACION PARA CORRECION DE VOLTAJES
+       1.4
+
+# **** FIN DE ARCHIVO ****
+

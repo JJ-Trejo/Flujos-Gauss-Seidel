@@ -15,8 +15,6 @@ WRITE ( *,10) n, e
 			20X, ' IMPEDANCIAS Y ADMITANCIAS PRIMITIVAS', /,&
 			24X, ' ( v a l o r e s  e n  p. u. )', /, 17X, 'N O D O', / &
 			' ELEMENTO', 3X, 'SALIDA', 3X, 'LLEGADA', 5X, 'IMPEDANCIA SEIRE', 10X 'Ypq / 2',/ )
-
-
 DO i=1, e
 
 	WRITE (66,11) i, p(i), q(i), zpq(i), yppqs2(i)
@@ -45,18 +43,13 @@ WRITE ( *,12) Sbase, Slack, imax, tol, Faa
 			3X, ' POTENCIA DE CARGA'  )
 
 DO i=1, n
-
 	WRITE (66,13) i, EN(i), SGen(i), Scarga(i)
 	WRITE ( *,13) i, EN(i), SGen(i), Scarga(i)
-
 END DO
 
 13 FORMAT ( I3, 5X, 1F8.5,'+j',1F8.5, 4X, 1F8.5,'+j',1F8.5, 7X, 1F8.5,'+j',1F8.5     )
 
 WRITE (66,*)
 WRITE ( *,*)
-
-
- 
 
 END SUBROUTINE

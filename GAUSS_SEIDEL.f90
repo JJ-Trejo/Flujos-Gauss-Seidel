@@ -13,10 +13,9 @@ COMPLEX :: SUMA2 = 0.0
 COMPLEX :: MaxDeltaEp = 0.0
 real :: potReal = 0.0
 real :: potReact = 0.0
-ALLOCATE ( Epacel(n), Epk(n), Fpot(n,n) )
+ALLOCATE ( Epacel(n), Fpot(n,n) )
 
 Fpot = 0.0;
-Epk = 0.0
 Epacel = 0.0 
 k=0
 DeltaEp = 0.0
@@ -33,14 +32,12 @@ DO while( .not. (condicion1 .or. condicion2) ) !termina cuando cualquiera de las
 	20 FORMAT ( /, ' ITERACION :' , I3 , 3X , 'k: ' , I3, /, ' NODO', 9X, 'Ep(pi) anterior', 15X, ' Ep(pi) acelerado', 8X, ' D E S V I A C I O N' )
 
 	DO pi=1, n !Para cada iteracion se modifican todos los nodos, excepto el slack 
-
 		!inicializamos las variables
 		SUMA  = 0.0
 		SUMA1 = 0.0
 		SUMA2 = 0.0
 		DeltaEp = 0.0
 		EpTemp = 0.0
-
 		!si el nodo "pi" es diferente al nodo slack
 		IF ( pi .NE. Slack ) THEN													
 			
@@ -67,9 +64,7 @@ DO while( .not. (condicion1 .or. condicion2) ) !termina cuando cualquiera de las
 			if ( abs(DeltaEp) > abs(MaxDeltaEp) ) THEN 
 				MaxDeltaEp = DeltaEp
 			end if
-
 		END IF
-
 	END DO
 
 	k=k+1 !Se le suma 1 a la iteración "k"
@@ -94,12 +89,9 @@ DO while( .not. (condicion1 .or. condicion2) ) !termina cuando cualquiera de las
 END DO
 
 !***************Inicia calculo de flujos de potencia*****************
-
 WRITE (66,18) Slack
 WRITE ( *,18) Slack
 18 FORMAT ( ' Nodo compensador ', I3, 2/, ' Codigo de Bus', 3X, 'FLUJOS DE POTENCIA', /, 3X,' p - q', 8X, 'Megawatts', 2X, 'Megavars' )
-
-
 
 !Recorre todos los elementos y se va llenando el arreglo Fpot
 DO i=1,e
@@ -131,7 +123,6 @@ END DO
 WRITE (66,19) potReal, potReact
 WRITE ( *,19) potReal, potReact
 19 FORMAT ( /,' La potencia del nodo compensador se obtiene sumando los flujos de las lineas que salen de ese bus', 2/, ' Potencia Real = ', F8.1, ' MW' , /, ' Potencia Reactiva = ', F8.1, ' MVAR', /)
-
 
 CLOSE(66) !Se cierra el archivo de resultados para evitar cualquier problema con escritra
 

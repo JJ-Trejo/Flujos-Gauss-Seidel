@@ -3,7 +3,7 @@ SUBROUTINE INSPECCION
 USE mDATA
 
 IMPLICIT NONE
-!nombre	    funci�n/tipo
+!nombre	    funcion/tipo
 ! nodo      contador de nodos/INTEGER
 ! ele       contador de elemento/INTEGER
 ! nodo1     INTEGR
@@ -33,8 +33,7 @@ DO nodo=1,n
 			Ybus(nodo,nodo)=Ybus(nodo,nodo)+(1.0/zpq(ele))
 			!SI EL ELEMENTO TIENE ADMITANCIA EN DERIVACION yppqs2(ele)
 			IF (tipoE(ele) .EQ. 1) THEN
-				Ybus(nodo,nodo)=Ybus(nodo,nodo) + yppqs2(ele)
-				
+				Ybus(nodo,nodo)=Ybus(nodo,nodo) + yppqs2(ele)	
 			END IF 
 		END IF					   
 	END DO

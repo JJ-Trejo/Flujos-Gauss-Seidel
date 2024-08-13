@@ -6,7 +6,6 @@ IMPLICIT NONE
 INTEGER :: i,j
 
 !***** PARAMETROS AUXILIARES *****
-
 ALLOCATE ( Sneta(n), KL(n), YL(n,n) )
 
 Sneta = 0.0
@@ -18,15 +17,12 @@ WRITE ( *,14)
 14 FORMAT ( 2/,'<< PARAMETROS AUXILIARES >>', /, ' PARAMETROS KLp' / )
 
 DO i=1, n
-
 	IF (i .NE. Slack) THEN
 		Sneta (i) = SGen(i) - Scarga(i)
 		KL(i) = ( CONJG(Sneta(i)) / Ybus(i,i))
 		WRITE (66,15) i, KL(i)
 		WRITE ( *,15) i, KL(i)
-
 	END IF 
-
 END DO
 
 15 FORMAT ( ' KL (', I3, ') = ', 1F8.5,'+j',1F8.5  )
@@ -37,10 +33,8 @@ WRITE ( *,16)
 
 !Recorre todos los elementos y se va llenando el arreglo YL
 DO i=1,e
-
 	YL(p(i), q(i)) = Ybus(p(i),q(i))/Ybus(p(i),p(i))
 	YL(q(i), p(i)) = Ybus(q(i),p(i))/Ybus(q(i),q(i))
-
 END DO
 
 !Imprime con formato YLpq
