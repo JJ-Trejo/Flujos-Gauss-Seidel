@@ -160,4 +160,30 @@
   3         .95472+ j   -.09380          .95461+ j        -.09384    -.00008+ j   -.00003
   4         .95325+ j   -.10000          .95316+ j        -.10004    -.00006+ j   -.00003
   5         .94536+ j   -.11485          .94529+ j        -.11487    -.00005+ j   -.00001
+
 *****EL SISTEMA CONVERGE*****
+
+ Nodo compensador   1
+
+ Codigo de Bus   FLUJOS DE POTENCIA
+    p - q        Megawatts  Megavars
+ (  1,  2) =        89.2    -4.7
+ (  1,  3) =        40.9     2.8
+ (  2,  1) =       -87.6     3.6
+ (  2,  3) =        24.7     4.2
+ (  2,  4) =        28.0     3.7
+ (  2,  5) =        55.0     8.5
+ (  3,  1) =       -39.5    -3.5
+ (  3,  2) =       -24.3    -6.8
+ (  3,  4) =        19.0    -4.6
+ (  4,  2) =       -27.5    -6.0
+ (  4,  3) =       -18.9     2.9
+ (  4,  5) =         6.3    -1.9
+ (  5,  2) =       -53.7    -7.5
+ (  5,  4) =        -6.3    -2.6
+
+ La potencia del nodo compensador se obtiene sumando los flujos de las lineas que salen de ese bus
+
+ Potencia Real =    130.1 MW
+ Potencia Reactiva =     -1.9 MVAR
+

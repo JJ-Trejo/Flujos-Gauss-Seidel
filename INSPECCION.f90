@@ -36,7 +36,7 @@ DO nodo=1,n
 				Ybus(nodo,nodo)=Ybus(nodo,nodo) + yppqs2(ele)
 				
 			END IF 
-		END IF
+		END IF					   
 	END DO
 END DO
 

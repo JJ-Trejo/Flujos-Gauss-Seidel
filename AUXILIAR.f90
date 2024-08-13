@@ -35,6 +35,7 @@ WRITE (66,16)
 WRITE ( *,16)
 16 FORMAT ( 2/,' PARAMETROS YLpq' / )
 
+!Recorre todos los elementos y se va llenando el arreglo YL
 DO i=1,e
 
 	YL(p(i), q(i)) = Ybus(p(i),q(i))/Ybus(p(i),p(i))
@@ -42,9 +43,10 @@ DO i=1,e
 
 END DO
 
+!Imprime con formato YLpq
 DO i=1, n
 	DO j=1, n
-		IF (YL(i, j) .NE. 0.0) THEN
+		IF (YL(i, j) .NE. 0.0) THEN !Si el valor del arreglo seleccionado es diferente de cero, se imprime
 			WRITE (66,17) i,j, YL(i, j)
 			WRITE ( *,17) i,j, YL(i, j)
 		END IF
@@ -53,16 +55,7 @@ END DO
 
 17 FORMAT ( ' YL (', I3, ',', I3, ') = ', 1F8.5, '+j', 1F8.5)
 
-
-
 !***** INICIA METODO DE GAUSS-SEIDEL *****
-
 CALL GAUSS_SEIDEL
-
-
-
-
-
-
 
 END SUBROUTINE

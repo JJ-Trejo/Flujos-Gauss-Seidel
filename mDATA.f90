@@ -9,6 +9,6 @@ COMPLEX, ALLOCATABLE :: Ybus(:,:)
 
 COMPLEX, ALLOCATABLE :: Sneta(:), KL(:), YL(:,:)
 COMPLEX :: EpTemp, DeltaEp
-COMPLEX, ALLOCATABLE :: Epacel(:), Epk(:)
+COMPLEX, ALLOCATABLE :: Epacel(:), Epk(:), Fpot(:,:)
 
 END MODULE mDATA
