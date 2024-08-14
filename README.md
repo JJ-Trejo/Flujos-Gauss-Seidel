@@ -14,7 +14,6 @@
 - Selecciona la opción "FLUJOS.mdp" y haz click en OK
 - O simplemente haz doble click en la opción "FLUJOS.mdp"
 - Para este punto ya tendrás abierta la carpeta en MIcrosoft Developer
-- Ahora dirigete al archivo principal "Flujos.f90"
 - abre la pestaña "Build"
 - Haz click en Compile FLUJOS.f90
 - Haz click en Build FLUJOS.exe (para generar el archivo ejecutable)
