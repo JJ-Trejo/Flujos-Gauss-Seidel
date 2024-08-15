@@ -30,11 +30,11 @@ WRITE (66,12) Sbase, Slack, imax, tol, Faa
 WRITE ( *,12) Sbase, Slack, imax, tol, Faa
 
 12 FORMAT ( /, ' >> CONDICIONES DE LA SIMULACION <<',2/, &
-            ' POTENCIA BASE              =', F8.2, /, &
-			' NODO COMPENSADOR           =', I3, /,   &
-			' NO. DE ITERACIONES MAX.    =', I3, /,   &
-			' TOLERANCIA DE CONVERGENCIA =', 1F8.5, /, &
-			' FACTOR DE ACELERACION      =', F8.3, 2/, &
+            '  POTENCIA BASE              =', F8.2, /, &
+			'  NODO COMPENSADOR           =', I3, /,   &
+			'  NO. DE ITERACIONES MAX.    =', I3, /,   &
+			'  TOLERANCIA DE CONVERGENCIA =', 1F8.5, /, &
+			'  FACTOR DE ACELERACION      =', F8.3, 3/, &
 			20X, ' D A T O S  D E  L O S  N O D O S ',/, &
 			24X, ' < valores en por unidad >', /, &
 			' NODO', &
@@ -47,9 +47,7 @@ DO i=1, n
 	WRITE ( *,13) i, EN(i), SGen(i), Scarga(i)
 END DO
 
-13 FORMAT ( I3, 5X, 1F8.5,'+j',1F8.5, 4X, 1F8.5,'+j',1F8.5, 7X, 1F8.5,'+j',1F8.5     )
+13 FORMAT ( I3, 5X, 1F8.5,'+j',1F8.5, 4X, 1F8.5,'+j',1F8.5, 7X, 1F8.5,'+j',1F8.5 )
 
-WRITE (66,*)
-WRITE ( *,*)
 
 END SUBROUTINE

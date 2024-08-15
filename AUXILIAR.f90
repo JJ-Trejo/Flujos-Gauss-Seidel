@@ -14,7 +14,7 @@ YL = 0.0
 
 WRITE (66,14)
 WRITE ( *,14)
-14 FORMAT ( 2/,'<< PARAMETROS AUXILIARES >>', /, ' PARAMETROS KLp' / )
+14 FORMAT ( 2/, ' << PARAMETROS AUXILIARES >>', 2/, 6X , ' PARAMETROS KLp' / )
 
 DO i=1, n
 	IF (i .NE. Slack) THEN
@@ -29,7 +29,7 @@ END DO
 
 WRITE (66,16)
 WRITE ( *,16)
-16 FORMAT ( 2/,' PARAMETROS YLpq' / )
+16 FORMAT ( 2/, 6X ,' PARAMETROS YLpq' / )
 
 !Recorre todos los elementos y se va llenando el arreglo YL
 DO i=1,e

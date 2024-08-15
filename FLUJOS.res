@@ -24,11 +24,12 @@
 
  >> CONDICIONES DE LA SIMULACION <<
 
- POTENCIA BASE              =  100.00
- NODO COMPENSADOR           =  1
- NO. DE ITERACIONES MAX.    = 15
- TOLERANCIA DE CONVERGENCIA =  .00010
- FACTOR DE ACELERACION      =   1.400
+  POTENCIA BASE              =  100.00
+  NODO COMPENSADOR           =  1
+  NO. DE ITERACIONES MAX.    = 15
+  TOLERANCIA DE CONVERGENCIA =  .00010
+  FACTOR DE ACELERACION      =   1.400
+
 
                      D A T O S  D E  L O S  N O D O S 
                          < valores en por unidad >
@@ -38,11 +39,8 @@
   3      1.00000+j  .00000      .00000+j  .00000         .45000+j  .15000
   4      1.00000+j  .00000      .00000+j  .00000         .40000+j  .05000
   5      1.00000+j  .00000      .00000+j  .00000         .60000+j  .10000
- 
 
-
-
-     MATRIZ DE ADMITANCIAS NODALES Ybus
+             MATRIZ DE ADMITANCIAS NODALES Ybus
 
         Ybus(  1,  1) =           6.25000   -18.69500
         Ybus(  1,  2) =          -5.00000    15.00000
@@ -58,8 +56,9 @@
         Ybus(  5,  5) =           3.75000   -11.21000
 
 
-<< PARAMETROS AUXILIARES >>
- PARAMETROS KLp
+ << PARAMETROS AUXILIARES >>
+
+       PARAMETROS KLp
 
  KL (  2) =   .00740+j  .00370
  KL (  3) =  -.00698+j -.00930
@@ -67,7 +66,7 @@
  KL (  5) =  -.02413+j -.04545
 
 
- PARAMETROS YLpq
+       PARAMETROS YLpq
 
  YL (  1,  2) =  -.80212+j  .00071
  YL (  1,  3) =  -.20053+j  .00018
@@ -182,8 +181,24 @@
  (  5,  2) =       -53.7    -7.5
  (  5,  4) =        -6.3    -2.6
 
- La potencia del nodo compensador se obtiene sumando los flujos de las lineas que salen de ese bus
+ La potencia del nodo compensador se obtiene sumando
+ los flujos de las lineas que salen de ese bus
 
- Potencia Real =    130.1 MW
- Potencia Reactiva =     -1.9 MVAR
+ *** PERDIDAS Y BALANCE REACTIVO DE LOS ELEMENTOS DEL SISTEMA ***
+
+ POTENCIA NETA DEL NODO COMPENSADOR =  130.108 (MW) + j    -1.915 (MVAR)
+
+
+DEL BUS   2 AL BUS   1 =   1.59344 (MW) + j  -1.12827 (MVAR)
+DEL BUS   3 AL BUS   1 =   1.35837 (MW) + j   -.72509 (MVAR)
+DEL BUS   3 AL BUS   2 =    .40210 (MW) + j  -2.57294 (MVAR)
+DEL BUS   4 AL BUS   2 =    .50514 (MW) + j  -2.26070 (MVAR)
+DEL BUS   5 AL BUS   2 =   1.28838 (MW) + j   1.05066 (MVAR)
+DEL BUS   4 AL BUS   3 =    .04048 (MW) + j  -1.71715 (MVAR)
+DEL BUS   5 AL BUS   4 =    .03522 (MW) + j  -4.45759 (MVAR)
+
+ *** BALANCE DE POTENCIAS DEL SISTEMA ***
+
+ PERDIDAS TOTALES =     5.223 (MW)
+ BALANCE REACTIVO =   -11.811(MVAR)
 

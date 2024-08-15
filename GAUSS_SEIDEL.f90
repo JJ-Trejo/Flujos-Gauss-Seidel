@@ -11,6 +11,8 @@ COMPLEX :: SUMA  = 0.0
 COMPLEX :: SUMA1 = 0.0
 COMPLEX :: SUMA2 = 0.0
 COMPLEX :: MaxDeltaEp = 0.0
+COMPLEX :: FpotTemp = 0.0
+COMPLEX :: perdidasTotales = 0.0
 real :: potReal = 0.0
 real :: potReact = 0.0
 ALLOCATE ( Epacel(n), Fpot(n,n) )
@@ -122,7 +124,24 @@ END DO
 
 WRITE (66,19) potReal, potReact
 WRITE ( *,19) potReal, potReact
-19 FORMAT ( /,' La potencia del nodo compensador se obtiene sumando los flujos de las lineas que salen de ese bus', 2/, ' Potencia Real = ', F8.1, ' MW' , /, ' Potencia Reactiva = ', F8.1, ' MVAR', /)
+19 FORMAT ( /, ' La potencia del nodo compensador se obtiene sumando', &
+	        /, ' los flujos de las lineas que salen de ese bus', &
+			2/, ' *** PERDIDAS Y BALANCE REACTIVO DE LOS ELEMENTOS DEL SISTEMA ***', &
+			2/, ' POTENCIA NETA DEL NODO COMPENSADOR =' , F9.3, ' (MW) + j ', F9.3, ' (MVAR)', 2/ )
+
+!PERDIDAS Y BALANCE REACTIVO DE LOS ELEMENTOS DEL SISTEMA
+DO i=1, e
+	FpotTemp = Fpot( p(i), q(i) )*Sbase + Fpot( q(i), p(i) )*Sbase 
+	perdidasTotales = perdidasTotales + FpotTemp
+	WRITE ( 66, 24) q(i), p(i), REAL(FpotTemp), AIMAG(FpotTemp)
+	WRITE (  *, 24) q(i), p(i), REAL(FpotTemp), AIMAG(FpotTemp)
+END DO 
+!24 FORMAT ( 'DEL BUS ', I3, ' AL BUS ' , I3, ' = ', 3F9.5, '(MW) + j ', 3F9.5, '(MVAR)' , / )
+24 FORMAT  ( 'DEL BUS ', I3, ' AL BUS ' , I3, ' = ', F9.5,  ' (MW) + j ', F9.5, ' (MVAR)')
+
+WRITE (66,25) REAL(perdidasTotales), AIMAG(perdidasTotales)
+WRITE ( *,25) REAL(perdidasTotales), AIMAG(perdidasTotales)
+25 FORMAT ( /, ' *** BALANCE DE POTENCIAS DEL SISTEMA ***', 2/, ' PERDIDAS TOTALES = ', F9.3, ' (MW)' , /, ' BALANCE REACTIVO = ', F9.3, '(MVAR)' , / )
 
 CLOSE(66) !Se cierra el archivo de resultados para evitar cualquier problema con escritra
 
