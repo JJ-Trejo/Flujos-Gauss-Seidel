@@ -22,12 +22,30 @@
 - Ahora te pedira el nombre del archivo donde se guardarán los resultados, puedes ingresar el nombre que quieras, se recomiendo usar: "FLUJOS.res"
 - Una vez ingresado los datos anteriores se ejecutará el programa y mostrará los resultados tanto en la pantalla como en el archivo de resultados
 
-## EJEMPLO COMO HACER EL ARCHIVO DE DATOS
+## Cómo clonar y compilar el programa
+<p align="center">
+  <img src="assets/Inicializar.gif" width="700" alt="Como compilar el programa">
+</p>
+
+## Archivo ejecutable.exe
+<p>Cuando ya se compilo el programa se genera tu archivo.exe</p>
+
+<p align="center">
+  <img src="assets/ejecutable.gif" width="700" alt="Archivo ejecutable">
+</p>
+
+<!--   Forma alternativa de ingresar un gif                  -->
+<!--   ![Como compilar el programa](assets/Inicializar.gif)  -->
+<!--   ![Archivo ejecutable.exe](assets/ejecutable.gif)      -->
+
 <p>Programa desarrollado en Fortran 90</p>
 <p>Compilador usado: Fortran Power Station, ver. 4.0</p>
 
 ## YO HACIENDO EL PROGRAMA
-![Gatito GIF](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
+<p align="center">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="300" alt="Gatito GIF">
+    <!-- ![Gatito GIF](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif) -->  
+</p>
 
 ## AUTORES
 | [<img src="https://avatars.githubusercontent.com/u/134732505?v=4" width=115><br><sub> J.J. Trejo M. </sub>](https://github.com/Yisus-1) |
