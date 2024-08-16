@@ -44,6 +44,10 @@
     <!-- ![Gatito GIF](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif) -->  
 </p>
 
-## AUTORES
+## REFERENCIAS
+- Fernando Toledo Toledo (2001). Análisis de sistemas de potencia: Algoritmos y programas computacionales.
+- Fernando Toledo Toledo (2014). Programación aplicada a sistemas eléctricos de potencia: Algoritmos y programas computacionales
+
+## AUTOR
 | [<img src="https://avatars.githubusercontent.com/u/134732505?v=4" width=115><br><sub> J.J. Trejo M. </sub>](https://github.com/Yisus-1) |
 | :---: |
