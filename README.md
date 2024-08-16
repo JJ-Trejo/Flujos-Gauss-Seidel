@@ -6,19 +6,16 @@
 <p>Programa computacional para el calculo de flujos de potencia en el régimen permanente equilibrado</p>
 
 ## :hammer_and_wrench: INSTRUCCIONES
+- Nota: la carpeta la deberás de guardar dentro de tu disco duro para que Microsoft Developer lo puede ejecutar
 - Realiza un git clone del repositorio
 - Abre Microsoft Developer Studio
-- Haz click en la pestaña "File"
-- Haz click en "OpenWorkspace..."
-- dirigete a la dirección donde realizaste el git clone de la carpeta "Flujos-Gauss-Seidel"
+- Haz click en la pestaña "File" --> "OpenWorkspace..."
+- Dirigete a la dirección donde realizaste el git clone de la carpeta "Flujos-Gauss-Seidel"
 - Selecciona la opción "FLUJOS.mdp" y haz click en OK
-- O simplemente haz doble click en la opción "FLUJOS.mdp"
 - Para este punto ya tendrás abierta la carpeta en MIcrosoft Developer
-- abre la pestaña "Build"
-- Haz click en Compile FLUJOS.f90
-- Haz click en Build FLUJOS.exe (para generar el archivo ejecutable)
+- Abre la pestaña "Build" --> Compile FLUJOS.f90 --> Build FLUJOS.exe (para generar el archivo ejecutable)
 - Haz click en Execute FLUJOS.exe
-- Para este punto se abrira una terminal donde primero te pedirá ingresar el nombre del archivo de datos: El archivo de datos que esta dentro del repositorio se llama: FLUJOS.dat, ingresalo para probar el programa o ingresa tu propio archivo de datos
+- Se abrira una terminal donde primero te pedirá ingresar el nombre del archivo de datos: El archivo de datos que esta dentro del repositorio se llama: FLUJOS.dat, ingresalo para probar el programa o ingresa tu propio archivo de datos
 - Ahora te pedira el nombre del archivo donde se guardarán los resultados, puedes ingresar el nombre que quieras, se recomiendo usar: "FLUJOS.res"
 - Una vez ingresado los datos anteriores se ejecutará el programa y mostrará los resultados tanto en la pantalla como en el archivo de resultados
 
@@ -28,7 +25,7 @@
 </p>
 
 ## Archivo ejecutable.exe
-<p>Cuando ya se compilo el programa se genera tu archivo.exe</p>
+<p>Cuando ya se compilo el programa se genera tu archivo.exe, y ya no necesitas los demás archivos mas que tu archivo de datos ".dat" </p>
 
 <p align="center">
   <img src="assets/ejecutable.gif" width="700" alt="Archivo ejecutable">
